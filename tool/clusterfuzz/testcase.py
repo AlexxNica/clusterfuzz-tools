@@ -35,15 +35,15 @@ class Testcase(object):
     else:
       return '.%s' % split_filename[-1]
 
-  def _unescape(self, str):
+  def _unescape(self, string):
     """Un-escape a string."""
-    str = str.replace("&lt;", "<")
-    str = str.replace("&gt;", ">")
-    str = str.replace("&apos;", "'")
-    str = str.replace("&quot;", "\"")
+    string = string.replace("&lt;", "<")
+    string = string.replace("&gt;", ">")
+    string = string.replace("&apos;", "'")
+    string = string.replace("&quot;", "\"")
     # This has to be last call.
-    str = str.replace("&amp;", "&")
-    return str
+    string = string.replace("&amp;", "&")
+    return string
 
   def get_environment_and_args(self):
     """Sets up the environment by parsing stacktrace lines."""
